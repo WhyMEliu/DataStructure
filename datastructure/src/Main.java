@@ -1,9 +1,11 @@
+import Stack.ArrayStack;
 import array.Array;
 import array.Student;
 
 public class Main {
 
     public static void main(String[] args) {
+        /*数组测试
         Array<Integer> arr = new Array<Integer>(20);
         for (int i = 0; i < 10; i++) {
             arr.addLast(i);
@@ -25,6 +27,15 @@ public class Main {
         arrs.removeFirst();
         arrs.removeFirst();
 
-        System.out.println(arrs);
+        System.out.println(arrs);*/
+
+        ArrayStack<Integer> stack = new ArrayStack<Integer>();
+        for (int i = 0 ; i < 5 ; i++){
+            stack.push(i);
+            System.out.println(stack);
+        }
+        stack.pop();
+        System.out.println(stack);
+
     }
 }

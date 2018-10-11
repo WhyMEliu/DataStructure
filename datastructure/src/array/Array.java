@@ -110,6 +110,14 @@ public class Array<E> {
         return data[index];
     }
 
+    public E getLast(){
+        return get(size-1);
+    }
+
+    public E getFirst(){
+        return get(0);
+    }
+
     /**
      * 修改index索引的位置元素为e
      * @param index
@@ -165,7 +173,7 @@ public class Array<E> {
         }
         size--;
         data[size]=null;
-        if(size<=data.length/2){
+        if(size<=data.length/4 && data.length/2!=0){
             resize(data.length/2);
         }
         return ret;
