@@ -207,6 +207,15 @@ public class Array<E> {
     }
 
 
+    private void resize(int newCapacity){
+        E[] newdata = (E[]) new Object[newCapacity];
+        for (int i=0; i<size ; i++){
+            newdata[i]=data[i];
+        }
+        data=newdata;
+
+    }
+
     @Override
     public String toString (){
         StringBuilder res =new StringBuilder();
@@ -221,16 +230,6 @@ public class Array<E> {
             }
         }
         return res.toString();
-    }
-
-
-    private void resize(int newCapacity){
-        E[] newdata = (E[]) new Object[newCapacity];
-        for (int i=0; i<size ; i++){
-            newdata[i]=data[i];
-        }
-        data=newdata;
-
     }
 
 

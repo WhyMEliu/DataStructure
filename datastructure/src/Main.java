@@ -1,6 +1,3 @@
-import stack.ArrayStack;
-import array.Array;
-import array.Student;
 
 public class Main {
 
