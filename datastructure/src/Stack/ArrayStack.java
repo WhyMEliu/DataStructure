@@ -1,4 +1,4 @@
-package Stack;
+package stack;
 
 
 import array.Array;
@@ -57,5 +57,19 @@ public class ArrayStack<E> implements Stack<E>{
         }
         res.append("] top");
         return res.toString();
+    }
+
+    public static void main(String[] args) {
+        /**
+         * 栈测试
+         */
+        ArrayStack<Integer> stack = new ArrayStack<Integer>();
+        for (int i = 0 ; i < 5 ; i++){
+            stack.push(i);
+            System.out.println(stack);
+        }
+        stack.pop();
+        System.out.println(stack);
+
     }
  }
