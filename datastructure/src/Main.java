@@ -18,5 +18,7 @@ public class Main {
 
         bst.postOrder();
         System.out.println();
+
+        bst.preOrderNR();
     }
 }
