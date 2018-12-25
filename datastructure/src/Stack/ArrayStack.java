@@ -1,18 +1,18 @@
 package stack;
 
 
-import array.Array;
+import arraylist.ArrayList;
 
 public class ArrayStack<E> implements Stack<E>{
 
-    Array<E> array;
+    ArrayList<E> array;
 
     public ArrayStack (int capacity){
-        array=new Array<>(capacity);
+        array=new ArrayList<>(capacity);
     }
 
     public ArrayStack (){
-        array=new Array<>();
+        array=new ArrayList<>();
     }
 
     @Override

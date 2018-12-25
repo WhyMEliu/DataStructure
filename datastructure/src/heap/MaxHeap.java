@@ -1,20 +1,20 @@
 package heap;
 
-import array.Array;
+import arraylist.ArrayList;
 
 public class MaxHeap<E extends Comparable<E>> {
-	private Array<E> data;
+	private ArrayList<E> data;
 	
 	public MaxHeap(int capactiy){
-		data = new Array<E>(capactiy);
+		data = new ArrayList<E>(capactiy);
 	}
 	
 	public MaxHeap(){
-		data = new Array<>();
+		data = new ArrayList<>();
 	}
 	
 	public MaxHeap(E[] arr){
-		data = new Array<>(arr);
+		data = new ArrayList<>(arr);
 		for (int i = parent(data.getSize() - 1); i >= 0; i--) {
 			siftDown(i);
 		}

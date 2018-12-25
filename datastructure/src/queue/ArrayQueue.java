@@ -1,17 +1,17 @@
 package queue;
 
-import array.Array;
+import arraylist.ArrayList;
 
 public class ArrayQueue<E> implements Queue<E> {
 
-    private Array<E> array;
+    private ArrayList<E> array;
 
     public ArrayQueue (int capacity){
-        array = new Array<>(capacity);
+        array = new ArrayList<>(capacity);
     }
 
     public ArrayQueue(){
-        array= new Array<>();
+        array= new ArrayList<>();
     }
 
     @Override
