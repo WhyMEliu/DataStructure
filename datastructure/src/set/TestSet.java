@@ -21,14 +21,20 @@ public class TestSet {
 	
 	public static void main(String[] args) {
 		String fileName = "pride-and-prejudice.txt";
-		BSTSet<String> bstSet = new BSTSet();
+		BSTSet<String> bstSet = new BSTSet<>();
 		double time1 =  testSet(bstSet,fileName);
 		System.out.println("BST Set: " + time1 + "s");
 		
 		System.out.println();
 		
-		LinkedListSet<String> linkedListSet = new LinkedListSet();
+		LinkedListSet<String> linkedListSet = new LinkedListSet<>();
 		double time2 =  testSet(linkedListSet,fileName);
 		System.out.println("LinkedList Set: " + time2 + "s");
+		
+		System.out.println();
+		
+		AVLSet<String> avlSet = new AVLSet<>(); 
+		double time3 =  testSet(avlSet,fileName);
+		System.out.println("AVL Set: " + time3 + "s");
 	}
 }

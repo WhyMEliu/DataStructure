@@ -28,14 +28,20 @@ public class TestMap {
 	
 	public static void main(String[] args) {
 		String fileName = "pride-and-prejudice.txt";
-		BSTMap<String, Integer> bstMap = new BSTMap();
+		BSTMap<String, Integer> bstMap = new BSTMap<>();
 		double time1 =  testMap(bstMap,fileName);
 		System.out.println("BST Map: " + time1 + "s");
 		
 		System.out.println();
 		
-		LinkedListMap<String, Integer> linkedListMap = new LinkedListMap();
+		LinkedListMap<String, Integer> linkedListMap = new LinkedListMap<>();
 		double time2 =  testMap(linkedListMap,fileName);
 		System.out.println("LinkedList Map: " + time2 + "s");
+		
+		System.out.println();
+		
+		AVLMap<String, Integer> avlMap = new AVLMap<>();
+		double time3 =  testMap(avlMap,fileName);
+		System.out.println("AVL Map: " + time3 + "s");
 	}
 }

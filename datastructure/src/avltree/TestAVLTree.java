@@ -36,8 +36,21 @@ public class TestAVLTree {
             
             System.out.println("AVLTime:"+AVLTime+"s");
             
+            System.out.println("Total different words: " + map.getSize());
+            System.out.println("Frequency of PRIDE: " + map.get("pride"));
+            System.out.println("Frequency of PREJUDICE: " + map.get("prejudice"));
+            System.out.println("isBST: " + map.isBST());
+            System.out.println("isBalanced: " + map.isBalanced());
             
-            //BST树极限状态下的性能测试
+            for (String word : words) {
+				map.remove(word);
+				if(!map.isBST() || !map.isBalanced()){
+					throw new RuntimeException("Error");
+				}
+			}
+            
+            
+/*            //BST树极限状态下的性能测试
             long startTimeBST = System.nanoTime();
             
             BSTMap<String, Integer> bst = new BSTMap<>();
@@ -56,14 +69,10 @@ public class TestAVLTree {
             
             double BSTTime = (endTimeBST - startTimeBST)/1000000000.0;
             
-            System.out.println("BSTTime:"+BSTTime+"s");
+            System.out.println("BSTTime:"+BSTTime+"s");*/
             
             
-            /*System.out.println("Total different words: " + map.getSize());
-            System.out.println("Frequency of PRIDE: " + map.get("pride"));
-            System.out.println("Frequency of PREJUDICE: " + map.get("prejudice"));
-            System.out.println("isBST: " + map.isBST());
-            System.out.println("isBalanced: " + map.isBalanced());*/
+           
         }
     }
 }
